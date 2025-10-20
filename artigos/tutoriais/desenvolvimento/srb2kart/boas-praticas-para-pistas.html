@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<link rel="icon" type="image/x-icon" href="/recursos/imagens/acervo/favicon.png">
+		<link rel="stylesheet" type="text/css" href="/estilo.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Tutorial de boas práticas para pistas - Acervo SRB2 Brasil</title>
+	</head>
+	<body>
+		<div class="conteiner">
+			<div class="caixa-simples caixa-topo">
+				<p>página atualizada pela última vez em 20 de outubro de 2025</p>
+				<p><a href="https://github.com/riomccloud/acervo-srb2-brasil">ver o código-fonte no GitHub</a></p>
+			</form>
+			</div>
+			<a href="/index.html">
+				<div class="cabecalho">
+					<img src="/recursos/imagens/acervo/logotipo-menor.png">
+				</div>
+			</a>
+		</div>
+		<div class="conteiner">
+			<div class="caixa-simples">
+				<a href="/add-ons/index.html"><img src="/recursos/imagens/acervo/faixas-das-centrais/add-ons.png"></a>
+				<a href="/artigos/index.html"><img src="/recursos/imagens/acervo/faixas-das-centrais/artigos.png"></a>
+				<a href="/comunidades/index.html"><img src="/recursos/imagens/acervo/faixas-das-centrais/comunidades.png"></a>
+				<a href="/torneios/index.html"><img src="/recursos/imagens/acervo/faixas-das-centrais/torneios.png"></a>
+				<a href="/acervo/index.html"><img src="/recursos/imagens/acervo/faixas-das-centrais/acervo.png"></a>
+			</div>
+			<nav class="caixa-simples">
+				<p>/ artigos / <a href="/artigos/tutoriais/index.html">tutoriais</a> / <a href="/artigos/tutoriais/desenvolvimento/index.html">desenvolvimento</a> / <a href="/artigos/tutoriais/desenvolvimento/srb2kart/index.html">srb2kart</a> / <strong>você está aqui</strong></p>
+			</nav>
+			<div class="corpo">
+			<h2>Tutorial de boas práticas para pistas</h2>
+			
+				<h3>Introdução</h3>
+				
+				<p>Olá! Se você está vendo isto, provavelmente é porque você está dando um toque final no seu primeiro mapa. Porém, uma coisa é criar seu mapa, e outra coisa é fornecer os recursos necessários para torná-lo realizável, jogável e apresentável no jogo. Mesmo que tudo isso não seja absolutamente mandatório para fazer com que sua pista funcione, qualquer mapa com os padrões mais básicos terão todos os elementos a seguir.</p>
+				
+				<p>As principais Necessidades de Mapas são:</p>
+				
+				<ul>
+					<li>Um <strong>arquivo de música</strong>, que vai ser a música que vai tocar no seu mapa</li>
+					<li>O cabeçalho do mapa, também conhecido como <strong>MAINCFG</strong> ou <strong>Map Header</strong></li>
+					<li>Uma <strong>thumbnail</strong> que aparece sempre que você seleciona um mapa na votação em partidas online</li>
+					<li>O título da música e sua origem, também conhecido como <strong>Musicdef</strong></li>
+					<li>Um <strong>minimapa</strong> que mostra onde os jogadores estão na pista e ajuda na legibilidade das curvas</li>
+				</ul>
+				
+				<p>Este tutorial vai te ensinar a como fazer esses quatro recursos diferentes. Suas ferramentas obrigatórias serão um <strong>programa de música</strong> (vou usar o Audacity), <strong>SLADE</strong>, <strong>Zone Builder</strong> (ZB), um programa de edição de imagens (No meu caso vou usar o <strong>GIMP</strong>).</p>
+				
+				<h3>Arquivo de música</h3>
+				
+				<h4>O que é?</h4>
+				
+				<p>O arquivo de música é o que você precisa para que sua pista tenha sua própria música. Mesmo que você possa usar as músicas vanilla (músicas que são usadas nas pistas que já estão no jogo), dar à sua pista um toque distinto é sempre algo que <strong>tornará ela especial, independentemente da qualidade da pista</strong>. Para algumas pessoas, a música é a principal inspiração para criar as pistas!</p>
+				
+				<h4>Como escolher sua música</h4>
+				
+				<p>Existem algumas diretrizes sobre como escolher sua música. Obviamente, nenhuma delas é obrigatória, mas elas ajudam você a decidir entre várias escolhas:</p>
+				
+				<ul>
+					<li><strong>Escolha uma música que você goste MUITO</strong>. Pontos extras se é de um jogo que você realmente gosta. Tenha em mente que você escutará muito essa música durante os testes - então é provável que você se canse de ouvir a música tocando várias vezes.</li>
+					<li><strong>Faça a música se encaixar na pista</strong>. Uma cidade ensolarada vai ter uma música mais alegre e animada, enquanto a música em um museu noturno localizado em um jardim será mais relaxante. Ao mesmo tempo que uma corrida acontecendo em um planeta se explodindo vai ter uma sensação muito mais épica para ela.
+						<ul>
+							<li>Opal Coast - <a href="https://www.youtube.com/watch?v=1wHSgRx0xJU">Normal Carly Carmine Theme - Yu-Gi-Oh! Duel Links</a></li>
+							<li>Planet Wisp - <a href="https://www.youtube.com/watch?v=uFUSim9dvQw">Planet Wisp (Act 1) - Sonic Colors</a></li>
+							<li>Os exemplos acima são as músicas escolhidas para duas das pistas do <a href="https://mb.srb2.org/addons/omnix-pack-v4-1-1-a-new-map-windmill-isle.2291/">Omnix Pack</a>, feito por Omnix.</li>
+						</ul>
+					</li>
+					<li><strong>Escolha uma fonte obscura</strong>. TODO MUNDO ou a maioria do povo já jogou Mario Kart, Super Smash Bros ou Sonic 1-3 etc. Obviamente, se sua pista é inspirada em um certo jogo, escolher uma música daquele OST ou um remix dela é aceitável, mas uma música original merece também a devida atenção. Você pode até chegar ao ponto da sua pista ter uma fonte que vem de um  ambiente totalmente diferente do jogo original. Por isso que usar músicas de jogos obscuros que você jogou também faz um bom trabalho em deixar sua pista bem especial.
+						<ul>
+							<li>Submerged Shipwreck Zone - <a href="https://www.youtube.com/watch?v=P2p80CJmmuM">Synthetic Chil (Factory Zone) - Hell Yeah! Wrath of the Dread Rabbit</a></li>
+							<li>Uma pista debaixo d’água do <a href="https://mb.srb2.org/showthread.php?t=45405">Spark Cup, feito por Star</a> que usa uma música que originalmente pertencia à uma fase de fábrica.  </li>
+						</ul>
+					</li>
+					<li><strong>Tenha certeza de que sua música não é tão longa nem tão curta</strong>. <a href="https://www.youtube.com/watch?v=rZpb_Orcss4">Esta música poderia se encaixar em todos os critérios mencionados acima, mas é muito curto e faz loops com muita frequência durante a corrida</a>. Ao mesmo tempo, a maioria das corridas geralmente levam 2 ou 3 minutos para terminar, <a href="https://www.youtube.com/watch?v=qDD-iYkHBhc">então uma música que dura muito também não funcionará, a menos que você consiga cortar e encaixar a música melhor</a>. Muitas músicas de video games geralmente tem um loop entre 1 a 2 minutos. Esse é geralmente um bom padrão. Tente ouvir essas músicas!</li>
+				</ul>
+			</div>
+		</div>
+		<div class="conteiner" style="margin-bottom: 1em;">
+			<div class="caixa-simples">
+				<p>Feito com ❤️ pela comunidade brasileira de Sonic Robo Blast 2 desde 2021.
+				<br>Todos os conteúdos presentes são de propriedade de seus respectivos autores. Para mais informações, <a href="/acervo/copyright.html">clique aqui</a>.</p>
+			</div>
+		</div>
+	</body>
+</html>

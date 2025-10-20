@@ -54,6 +54,22 @@ hr {
 	color: #c6c6ff;
 }
 
+kbd {
+	background-color: #eeeeee;
+	border-radius: 3px;
+	border: 1px solid #b4b4b4;
+	box-shadow:
+	0 1px 1px rgb(0 0 0 / 0.2),
+	0 2px 0 0 rgb(255 255 255 / 0.7) inset;
+	color: #333333;
+	display: inline-block;
+	font-size: 0.85em;
+	font-weight: bold;
+	line-height: 1;
+	padding: 2px 4px;
+	white-space: nowrap;
+}
+
 nav.caixa-simples {
 	margin-top: 1em;
 	text-align: revert;
@@ -183,7 +199,11 @@ img.icone-pequeno {
 	margin-bottom: 1em;
 }
 
-.lista>p {
+.lista > p {
+	margin: 0;
+}
+
+.lista > a + p {
 	margin: 0 0 0 1em;
 }
 
